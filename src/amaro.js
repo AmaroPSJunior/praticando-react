@@ -7,28 +7,37 @@ class amaro extends Component {
   constructor(props){
     super(props)
     this.state = {
-      name:'outro nome'
+      name:'inicial'
     }
+    this.mudarEstado = this.mudarEstado.bind(this)
+    this.reseta = this.reseta.bind(this)
+  }
 
-    mudarEstado (){    //<<<<<<<<<<< porque esta dando erro aqui 
-      this.setState({
-        name: 'nome amaral'
-      });
-    }
+  mudarEstado (){
+    this.setState({
+      name: 'alterado'
+    });
+  }
+
+  reseta (){
+    this.setState({
+      name: ''
+    });
   }
 
   render(){
     return (
-    <div className="amaro">
-        Amaro Comment
-        <User name='amaro' photo={Foto}></User>
+      <div className="amaro">
+          Amaro Comment
+          <User name='amaro' photo={Foto}></User>
 
-        <div>
-          outro: {this.state.name}
-        </div>
+          <div> 
+            outro: {this.state.name}
+          </div>
 
-        <button>mudar estado</button>
-    </div>
+          <button onClick={this.mudarEstado}>mudar estado</button>
+          <button onClick={this.reseta}>reseta</button> 
+      </div>
     );
   }
 }
