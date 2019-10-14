@@ -10,8 +10,12 @@ class User extends Component {
                 email: 'email'
             },
             {
-                nome: 'junior', 
-                email: 'outro'
+                name: 'junior',
+                email: 'email.junior'
+            },
+            {
+                name: 'teste',
+                email: 'emailteste'
             }
         ]
 
