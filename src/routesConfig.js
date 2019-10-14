@@ -4,7 +4,7 @@ import User from './pages/user/User';
 const routesConfig = [
     {
         path:'/',
-        component:Home,
+        component:Home, 
         exact:true
     },
     {
